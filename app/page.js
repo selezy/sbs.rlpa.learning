@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <Container>
       <h1 className="my-5">Post Data</h1>
-      <Button className="mb-3" color="primary" onClick={fetchData} disabled={loading}>
+      <Button className="mb-3" color="primary" onClick={() => fetchData()} disabled={loading}>
         {loading ? <Spinner size="lg" /> : 'Fetch Data'}
       </Button>
       {error && <div className="text-danger">{error}</div>}
